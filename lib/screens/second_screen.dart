@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
   String text;
+  static String secondPageRoute = '/SecondPage';
   SecondScreen(String text) {
     this.text = text;
   }
@@ -11,14 +12,16 @@ class SecondScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('My Second Screen'),
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Center(child: Text('Message from first screen $text')),
-            SizedBox(
-              height: 50,
-            )
-          ],
+      body: Center(
+        child: Container(
+          child: Column(
+            children: [
+              Center(child: Text('Message from first screen $text')),
+              SizedBox(
+                height: 50,
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -9,7 +9,20 @@ class FirstScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text('My First Screen'),
         ),
-        body: Container(),
+        body: Center(
+          child: Container(
+            child: RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, SecondScreen.secondPageRoute);
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => SecondScreen('Second Screen')));
+              },
+              child: Text("Go to Second screen"),
+            ),
+          ),
+        ),
       ),
     );
   }
